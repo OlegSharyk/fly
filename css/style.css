@@ -1,0 +1,711 @@
+/*
+----------------------------------------------------------------------------------------------------
+[Table of Contents]
+
+1. Base page configuration
+2. Elements of interface, Global classes and other blocks
+3. Layouts
+   3.1 Base layout
+4. Blocks
+   4.1 blockName                       		  | .className
+
+----------------------------------------------------------------------------------------------------
+*/
+
+@font-face {
+	font-family: 'MavenProLight';
+	src: url('fonts/MavenProLight300-Regular.eot');
+	src: url('fonts/MavenProLight300-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('fonts/MavenProLight300-Regular.woff') format('woff'), /* Modern Browsers */ url('fonts/MavenProLight300-Regular.ttf') format('truetype'), /* Safari, Android, iOS */ url('fonts/MavenProLight300-Regular.svg#MavenProLight300-Regular') format('svg');
+}
+
+.fonts {
+	font-family:'MavenProLight', Times;
+}
+
+/*
+####################################################################################################
+[1. Base page configuration]
+####################################################################################################
+*/
+
+body,div,dl,dt,dd,ul,ol,li,form,table,tr,td,
+h1,h2,h3,h4,h5,h6,pre,p,span,b,i,
+input,textarea, fieldset { margin:0; padding:0;}
+
+ul { list-style-type:none;}
+img, fieldset { border:none;}
+table { border-collapse:collapse; border-spacing:0;}
+
+h1,h2,h3,h4,h5,h6 {font-weight:normal;}
+
+html,
+body {
+	height:100%;
+
+}
+body { 
+    font-family: 'Maven Pro', sans-serif;
+    font-size:14px;
+	line-height:20px;
+    color:#666;
+    background:#d3eff5;
+}
+
+input, textarea, select, label { font-size:1em; font-family:inherit;}
+input[type="submit"] { cursor:pointer;}
+
+a { 
+    color:#1dabe9;
+    -webkit-transition:color .3s ease;
+    -moz-transition:color .3s ease;
+    -ms-transition:color .3s ease;
+    -o-transition:color .3s ease;
+    transition:color .3s ease;
+	text-decoration:none;
+}
+a:hover {
+
+}
+
+/* ===== [ link-preset ] ===== */
+
+.b-link {
+	display:inline-block;
+	vertical-align:top;
+	text-decoration:none;}
+
+	.b-link__inner {
+	    line-height:1.2;
+	    text-decoration:none;
+	    border-bottom:1px solid;
+    }
+
+a.b-link:hover { }
+
+.b-link_pseudo { }
+    .b-link_pseudo .b-link__inner { border-bottom:1px dotted;}
+
+/*
+####################################################################################################
+[2. Elements of interface, Global classes and other blocks]
+####################################################################################################
+*/
+
+.g-clear { clear:both;}
+.g-right { float:right !important;}
+.g-left { float:left !important;}
+
+.g-black { color:#000 !important;}
+.g-red { color:#c00 !important;}
+.g-green { color:#349c4d !important;}
+.g-orange { color:#f68f1e !important;}
+.g-grey { color:#999 !important;}
+.g-blue { color:#2a98d0 !important;}
+
+.g-hidden { display:none !important;}
+
+.line { overflow:visible;}
+
+.line:after { 
+    font-size:0;
+    content:".";
+    display:block;
+    height:0;
+    clear:both;
+    visibility:hidden;
+}
+
+/* ###########################################################################
+    [3. Layouts]
+########################################################################### */
+
+.wrap {
+	position:relative;
+	min-height:100%;
+	overflow:hidden;
+}
+
+.case {
+	padding:0 57px 0 38px;
+}
+
+/* header */
+.hdr {}
+
+.main {
+	width:1262px;
+	margin:0 auto;
+	/*overflow:hidden;*/
+}
+
+/* content */
+.cnt {
+	overflow:hidden;
+}
+
+
+/* footer */
+.ftr { 
+    position:relative;
+}
+
+/* ###########################################################################
+    [4. Blocks]
+########################################################################### */
+
+/*---------------------------------------------------------------------------
+    [4.1 Icons]
+---------------------------------------------------------------------------*/
+
+.ico {
+	display:inline-block;
+	background:url(../img/sprite.png) no-repeat;
+}
+
+.ico_activity {
+	width: 31px;
+	height: 25px;
+	background-position:0 0;
+}
+.ico_trip {
+	width: 26px;
+	height: 18px;
+	background-position:-32px 0;
+}
+.ico_book {
+	width: 26px;
+	height: 16px;
+	background-position:-59px 0;
+}
+.ico_earn-miles {
+	width: 20px;
+	height: 20px;
+	background-position:-86px 0;
+}
+.ico_settings {
+	width: 26px;
+	height: 26px;
+	background-position:-107px 0;
+}
+.ico_help {
+	width: 25px;
+	height: 25px;
+	background-position:-134px 0;
+}
+.ico_link01 {
+	width: 18px;
+	height: 13px;
+	background-position:-32px -27px;
+}
+.ico_notice {
+	width: 14px;
+	height: 15px;
+	background-position:-16px -26px;
+}
+.ico_search {
+	width: 15px;
+	height: 16px;
+	background-position:0 -27px;
+}
+.ico_mark {
+	width: 10px;
+	height: 12px;
+	background-position:-59px -27px;
+}
+.ico_stats {
+	width: 11px;
+	height: 12px;
+	background-position:-73px -27px;
+}
+.ico_miles {
+	width: 29px;
+	height: 30px;
+	background-position:0 -44px;
+}
+.ico_aadvantage {
+	width: 24px;
+	height: 25px;
+	background-position:-32px -43px;
+}
+.ico_time {
+	width: 28px;
+	height: 28px;
+	background-position:-60px -44px;
+}
+.ico_point {
+	width: 25px;
+	height: 24px;
+	background-position:-160px 0;
+}
+
+
+/*---------------------------------------------------------------------------
+    [4.2 Buttons]
+---------------------------------------------------------------------------*/
+
+.btn { 
+    position:relative;
+    display:inline-block;
+    vertical-align:top;
+}
+a.btn:hover { }
+a.btn:active { }
+
+
+/*---------------------------------------------------------------------------
+    [4.3 Forms]
+---------------------------------------------------------------------------*/
+
+.input-i { position:relative; margin-right:30px;}
+
+.input { }
+
+.ta {}
+
+/*---------------------------------------------------------------------------
+    [4.4 Elements]
+---------------------------------------------------------------------------*/
+
+.panel {
+	float:left;
+	width:100px;
+	margin:0 0 -9999px;
+	padding:23px 0 9999px;
+	background:#eef9fe;
+	border-right:1px solid #fff;
+}
+
+.logo {
+	width:74px;
+	height:34px;
+	overflow:hidden;
+	margin:0 auto 27px;
+	text-indent:-9999px;
+	background:url(../img/logo.png) no-repeat;
+}
+.logo a {
+	display:block;
+	height:100%;
+}
+.account {
+	background:#daebf3;
+	padding:12px;
+	margin:0 0 25px;
+}
+.account__photo {
+	width:60px;
+	height:60px;
+	margin:0 auto;
+	position:relative;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+}
+.account__photo img {
+	display:block;
+	max-width:60px;
+	height:auto;
+	vertical-align:top;
+	position:relative;
+	z-index:1;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+}
+.account__photo-mask {
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:5;
+	width:48px;
+	height:48px;
+	border:6px solid #fff;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	opacity:0.6;
+	filter:alpha(opacity='60');
+}
+.account__activity {
+	font-weight:bold;
+	position:absolute;
+	z-index:10;
+	right:-10px;
+	top:-10px;
+	background:#09a788;
+	border:3px solid #daebf3;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	width:23px;
+	height:23px;
+	color:#fff;
+	text-align:center;
+}
+
+.menu {
+	font-size:10px;
+	line-height:14px;
+	text-transform:uppercase;
+	text-align:center;
+	padding:0 0 40px;
+}
+.menu li {
+	padding:0 0 36px;
+}
+.menu__link {
+	display:block;
+	color:#2893ca;
+	position:relative;
+}
+.menu__img {
+	display:block;
+	margin:0 0 10px;
+	text-align:center;
+}
+.menu strong {
+	font-weight:normal;
+}
+.menu__activity {
+	font-size:12px;
+	line-height:20px;
+	font-weight:bold;
+	position:absolute;
+	z-index:5;
+	right:15px;
+	top:-12px;
+	background:#43b3cb;
+	border:3px solid #eef9fe;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	width:23px;
+	height:23px;
+	color:#fff;
+	text-align:center;
+}
+
+
+.topbar {
+	font-weight:500;
+	color:#e3fbfd;
+	padding:16px 0;
+	background:#2ca9c5;
+	box-shadow: 0 -3px 6px rgba(0,0,0,0.3) inset;
+}
+.topbar .mark {
+	color:#f6e1ae;
+	text-transform:uppercase;
+}
+.topbar__chart {
+    display: inline-block;
+    vertical-align: top; 
+}
+.topbar .progress-box {
+    display: inline-block;
+    vertical-align: top;
+	width:40px;
+	height:40px;
+    overflow: hidden;
+}
+.topbar__txt{
+    display: inline-block;
+    vertical-align: top;
+	padding: 12px 0 0;
+}
+
+.tools {
+	float:right;
+	margin:0;
+}
+.tools li {
+	float:left;
+	padding:0 16px;
+	position:relative;
+	background:url(../img/sep01.png) no-repeat ;
+	min-height:24px;
+}
+.tools li:first-child {
+	background:none;
+}
+.tools a {
+	display:block;
+	position:relative;
+}
+.tools__activity {
+	position:absolute;
+	right:-6px;
+	top:-3px;
+	width:8px;
+	height:8px;
+	background:#f36d4c;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+
+.profile-map {
+	color:#fff;
+	width:100%;
+	height:479px;
+	position:relative;
+	overflow:hidden;
+	border-top:1px solid #41a2b4;
+}
+.profile-map__ttl {
+	font-size:30px;
+	line-height:40px;
+	font-weight:normal;
+	color:#5ac5de;
+	margin:0 0 0 103px;
+	white-space:nowrap;
+	width:285px;
+}
+
+.profile-map .ico_point {
+	vertical-align:top;
+	margin:8px 10px 0 0;
+}
+.profile-map__visual {
+	position:absolute;
+	z-index:1;
+	left:0;
+	top:0;
+	height:284px;
+	width:100%;
+}
+.profile-map__visual img {
+	display:block;
+	vertical-align:top;
+	margin:0 auto;
+}
+.profile-map__info {
+	padding:51px 0 0;
+	position:relative;
+	z-index:3;
+	width:1067px;
+	margin:0 auto;
+}
+
+.profile-map__left {
+	float:left;
+	width:238px;
+}
+.profile-map__head {
+	min-height:164px;
+	border-bottom:1px solid #33b1cc;
+	margin:0 0 15px;
+}
+.profile-map h2 {
+	font-size:24px;
+	line-height:40px;
+	font-weight:normal;
+}
+.profile-map__btm {
+
+}
+.profile-map__link {
+	color:#65dbf7;
+	display:inline-block;
+	vertical-align:top;
+}
+.profile-map__link .ico {
+	margin:0 9px 0 0;
+}
+
+.profile-map__right {
+	float:right;
+	width:245px;
+}
+.profile-map__features {
+	font-size:10px;
+	line-height:16px;
+	margin:0 0 15px;
+	color:#b4dfe2;
+}
+.profile-map__features li {
+	padding:10px 10px 10px 65px;
+	border-bottom:1px solid #33b1cc;
+	position:relative;
+}
+.profile-map__features-ttl {
+	font-size:20px;
+	line-height:24px;
+	display:block;
+	color:#fff;
+	font-weight:normal;
+}
+.profile-map__features .ico {
+	position:absolute;
+	left:12px;
+	top:15px;
+}
+
+.profile-map__center {
+	float:left;
+	width:282px;
+	margin:0 0 0 106px;
+}
+.profile-map .progress-box {
+    width:277px;
+	height:270px;
+	padding-bottom:55px;
+	background:url(../img/bg-progress02.png) no-repeat 0 100%;
+}
+.profile-map .progress-box__graphic {
+	margin:0 0 0 -20px;
+}
+
+
+.profile-features {
+	padding:0 57px 0 32px;
+	border-bottom:1px solid #d3eff5;
+	background: #def6ff;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2RlZjZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  #def6ff 0%, #ffffff 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#def6ff), color-stop(100%,#ffffff));
+	background: -webkit-linear-gradient(top,  #def6ff 0%,#ffffff 100%);
+	background: -o-linear-gradient(top,  #def6ff 0%,#ffffff 100%);
+	background: -ms-linear-gradient(top,  #def6ff 0%,#ffffff 100%);
+	background: linear-gradient(to bottom,  #def6ff 0%,#ffffff 100%);
+	/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#def6ff', endColorstr='#ffffff',GradientType=0 );*/
+}
+.profile-features li {
+	float:left;
+	width:242px;
+	min-height:65px;
+	padding:12px 29px 0 22px;
+	background:url(../img/sep02.png) no-repeat;
+}
+.profile-features__link {
+	display:block;
+	padding:0 21px 0 0;
+	overflow:hidden;
+	background:url(../img/arrow01.png) no-repeat 100% 50%;
+}
+.profile-features__visual {
+	float:left;
+	width:62px;
+}
+.profile-features__img{
+	display:block;
+	width:100%;
+	height:50px;
+	position:relative;
+	white-space:nowrap;
+	text-align:center;
+}
+.profile-features__img:after{
+	content:'';
+	display:inline-block;
+	height:100%;
+	width:1px;
+	overflow:hidden;
+	margin:0 0 0 -5px;
+	vertical-align:middle;
+}
+.profile-features__img img{
+	vertical-align:middle;
+	display:inline-block;
+	white-space:normal;
+}
+.profile-features__visual-txt {
+	text-align:center;
+	display:block;
+	color:#38ab54;
+	font-size:9px;
+	line-height:12px;
+	padding:0 5px 0 0;
+}
+.profile-features__cnt {
+	display:block;
+	text-align:right;
+}
+.profile-features__ttl {
+	font-size:14px;
+	display:block;
+	color:#333;
+	text-transform:uppercase;
+}
+.profile-features__txt {
+	display:block;
+	font-size:12px;
+	line-height:16px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.profile-nav {
+	font-size:18px;
+	line-height:20px;
+	font-weight:bold;
+	background:#fff;
+	padding:0 57px 0 32px;
+	overflow:hidden;
+}
+.profile-nav__item {
+	float:left;
+	margin:0 32px 0 0;
+	padding:0;
+}
+.profile-nav a {
+	display:block;
+	padding: 15px 13px 20px;
+	color:#333;
+	border-bottom:2px solid #fff;
+}
+.profile-nav__item_active a {
+	color:#39aaed;
+	border-bottom:2px solid #39aaed;
+}
+.profile-nav a:hover {
+	color:#39aaed;
+	border-bottom:2px solid #39aaed;
+}
+
+
+
+.ui__backgroundCircle {
+	fill: #38b5d1;
+}
+
+.ui__foregroundCircle {
+	fill: #ffd172;
+	stroke-width: 1px;
+}
+
+/*.ui__backgroundCircle {
+	fill: url(#gradientBackground2);
+}
+.ui__foregroundCircle {
+	fill: url(#gradientForeground2);
+}
+
+.BackgroundStop1 {
+	stop-color: #3bb7d4;
+}
+.BackgroundStop2 {
+	stop-color: #1596ad;
+}
+.ForegroundStop1 {
+	stop-color: #ffd37a;
+}
+.ForegroundStop2 {
+	stop-color: #ffc95a;
+}
+
+.progress-meter {
+	font-family:'MavenProLight', Times;
+}*/
+
+
+
+
+/* ####################################################################################################
+[5 Jquery/javascript plugins]
+#################################################################################################### */
+/*---------------------------------------------------------------------------
+    [5.1 PIE behavior for IE6-9 ]
+---------------------------------------------------------------------------*/
+
+/*.btn { behavior:url('css/PIE.htc');}*/
